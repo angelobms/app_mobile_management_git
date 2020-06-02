@@ -49,20 +49,15 @@ export default function App() {
 
               <Text style={styles.repository}>{repository.title}</Text>
 
-              <View style={styles.techsContainer}>
-                <Text style={styles.tech}>
-                  {repository.techs}
-                </Text>
-              </View>
+              <Text style={styles.url}>{repository.url}</Text>
 
-              {/*<View style={styles.techsContainer}>
+              <View style={styles.techsContainer}>
                 {repository.techs.map((tech) => (
                   <Text key={tech} style={styles.tech}>
                     {tech}
                   </Text>
                 ))}
               </View>
-                */}
 
               <View style={styles.likesContainer}>
                 <Text
@@ -102,6 +97,10 @@ const styles = StyleSheet.create({
   repository: {
     fontSize: 32,
     fontWeight: "bold",
+  },
+  url: {
+    fontSize: 12,
+    marginRight: 10,
   },
   techsContainer: {
     flexDirection: "row",
